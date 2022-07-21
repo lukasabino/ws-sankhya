@@ -40,4 +40,8 @@ export class OrdersService {
   async remove(id: string) {
     return this.orderModel.findByIdAndDelete(id).exec();
   }
+
+  async deleteall() {
+    return this.orderModel.deleteMany();
+  }
 }
